@@ -1,0 +1,29 @@
+
+// C++ implementation of the approach
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to find the sum of the odd
+// and even positioned digits in a number
+int main()
+{
+    int n, isEven = 0, isOdd = 0, rem, flag = 0;
+    cin >> n;
+    while(n > 0)
+    {
+        rem = n % 10;
+        if(rem % 2 == 0){
+            isEven = isEven + rem;
+            
+        }
+        else{
+            isOdd = isOdd + rem;
+            // flag = 1;
+        }
+        n = n/10;
+    }
+    cout << isEven << " ";
+    cout << isOdd;
+    
+    return 0;
+}
